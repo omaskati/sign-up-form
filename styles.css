@@ -19,8 +19,8 @@
 }
 
 #img-sidebar{
-
-    flex:1 1 33%;
+    width: 40%;
+    /* flex:1 1 auto; */
     background-image: url(images/halie-west-7Cb83_TuJcM-unsplash.jpeg);
 
     color: white;
@@ -28,30 +28,42 @@
 
 main{
 
-    flex:2 1 67%;
+    width:60%;
+    /* flex:1.5 1 auto; */
 
     display:flex;
     flex-direction: column;
 }
 
 #logo{
+    width: 100%;
+    aspect-ratio: 4; 
     background-color: rgba(0,0,0,0.4);
     font-family: 'Vina Sans', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 #logo img{
+    max-width:100%;
+    width: auto;
+    height:90%;
 }
 
 #logo h1{
+    font-size:max(2rem, 5vw);
 }
 
 #img-caption{
-
+    text-align:center;
+    font-size: 0.8rem;
 }
 
 
 
-form section{
+form section.fields{
     background-color: var(--formColor);
 }
