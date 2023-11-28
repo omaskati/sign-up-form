@@ -6,6 +6,10 @@
     --focusColor: #348cff;
     --boxShadow: 2px 2px 5px 0 rgba(0,0,0,0.2);
 
+    --contentPadding: 10px;
+    --buttonColor: #dc7636;
+    --hoverColor: #e86118;
+
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, 'Trebuchet MS', sans-serif;
 }
 
@@ -38,6 +42,18 @@ main{
 
     display:flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+main a:link, main a:visited{
+    color: var(--buttonColor);
+}
+
+main a:hover{
+    color: var(--hoverColor);
+}
+main a:active{
+    color: var(--focusColor);
 }
 
 #logo{
@@ -64,6 +80,7 @@ main{
 
 #logo h1{
     font-size:max(2rem, 5vw);
+    /* letter-spacing: 1px; */
 }
 
 #img-caption{
@@ -76,21 +93,53 @@ main{
     
     text-align:center;
     font-size: 0.8rem;
+  
+}
 
-    
+#img-caption a{
+    color:white;
 }
 
 
+#description, form section, #more-options{
+    
+    padding: var(--contentPadding) calc(2*var(--contentPadding));
+}
 
 form section.fields{
     background-color: var(--formColor);
     box-shadow: var(--boxShadow);
 }
 
+form ul{
+    padding: 0;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 15px 25px;
+}
+
+form ul>li{
+    list-style: none;
+
+}
+
+label{
+    display: block;
+    text-transform:uppercase;
+    font-size:0.75rem;
+    color: #555;
+}
+
 input{
     border: 1.5px solid #E5E7EB;
     
     border-radius: 5px;
+    padding: 6px;
+}
+
+input::placeholder{
+    font-size: 0.9rem;
 }
 
 input:focus{
@@ -107,9 +156,16 @@ button{
     outline: none;
     border: none;
     border-radius: 5px;
-    background-color:#dc7636;
+    background-color:var(--buttonColor);
     box-shadow: var(--boxShadow);
     padding: 10px 20px;
+    margin-top: 10px;
+
+    cursor: pointer;
 
     color:white;
+}
+
+button:hover{
+    background-color: var(--hoverColor);
 }
