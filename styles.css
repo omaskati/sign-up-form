@@ -24,6 +24,8 @@
     background-image: url(images/halie-west-7Cb83_TuJcM-unsplash.jpeg);
 
     color: white;
+
+    position: relative;
 }
 
 main{
@@ -44,6 +46,10 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: absolute;
+    top:25%;
+    
 }
 
 
@@ -58,8 +64,21 @@ main{
 }
 
 #img-caption{
+
+    position: absolute;
+    bottom: 0;
+
+    width:100%;
+
+    
     text-align:center;
     font-size: 0.8rem;
+
+    
+}
+
+#img-caption p{
+    
 }
 
 
